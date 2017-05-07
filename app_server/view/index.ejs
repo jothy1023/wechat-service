@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:ng="http://angularjs.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%=title %></title>
+  <link rel="stylesheet" href="lib/weui/dist/style/weui.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body ng-app="myApp">
+  <span id="openid" class="hidden"><%=openid %></span>
+  <section ng-include="'view/result.html'"></section>
+  <section ng-include="'view/register.html'"></section>
+  <section ng-include="'view/login.html'"></section>
+  <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

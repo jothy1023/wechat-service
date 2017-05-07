@@ -1,0 +1,71 @@
+<section>
+  <div class="wrapper signUpForm" ng-controller="SignUpController" ng-show="Result.choice==1">
+    <form name="signUpForm" ng-submit="submitSignUpForm()" class="weui-cells weui-cells_form" ng-show="Result.status==0">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">昵称 : </label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input"
+            placeholder="请输入昵称"
+            type="text"
+            name="nickname"
+            ng-model="user.nickname"
+            required>
+        </div>
+        <div class="weui-cell__ft weui-cell_warn">
+          <i class="weui-icon-warn" ng-show="signUpForm.nickname.$error.required && signUpForm.nickname.$touched"></i>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">邮箱 : </label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input"
+            placeholder="请输入邮箱"
+            type="email"
+            name="email"
+            ng-model="user.email"
+            required>
+        </div>
+        <div class="weui-cell__ft weui-cell_warn">
+          <i class="weui-icon-warn" ng-show="signUpForm.email.$error.required && signUpForm.email.$touched"></i>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">密码 : </label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input"
+            placeholder="请输入密码"
+            type="password"
+            name="password"
+            ng-model="user.password"
+            required>
+        </div>
+        <div class="weui-cell__ft weui-cell_warn">
+          <i class="weui-icon-warn" ng-show="signUpForm.password.$error.required && signUpForm.password.$touched"></i>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">确认密码 : </label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input"
+            placeholder="请确认密码"
+            type="password"
+            name="passwordConfirm"
+            ng-model="passwordConfirm"
+            ng-blur="checkPwd(passwordConfirm)"
+            compare="user.password"
+            required>
+        </div>
+        <div class="weui-cell__ft weui-cell_warn">
+          <i class="weui-icon-warn" ng-show="signUpForm.passwordConfirm.$error.required && signUpForm.passwordConfirm.$touched"></i>
+        </div>
+      </div>
+      <div class="weui-cell_warn" ng-show="signUpForm.passwordConfirm.$error.compare && signUpForm.passwordConfirm.$viewValue">两次输入密码不一致！</div>
+      <div class="weui-btn-area">
+        <button class="weui-btn weui-btn_primary">
+          <i></i>
+          注册并绑定
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

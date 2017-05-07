@@ -1,0 +1,33 @@
+<section>
+  <div ng-controller="ResultController">
+    <div class="button-sp-area" ng-show="Result.status==0">
+      <p class="weui-cells__title">请根据有无网站账号选择操作: </p><br>
+      <button ng-click="Result.choice=1" ng-show="Result.choice!=1" class="weui-btn weui-btn_default">无账号，注册并绑定</button>
+      <button ng-click="Result.choice=2" ng-show="Result.choice!=2" class="weui-btn weui-btn_plain-primary">已有账号，登录并绑定</button>
+    </div>
+    <div class="page msg_success js_show" ng-show="Result.status!=0">
+      <div class="weui-msg">
+        <div class="weui-msg__icon-area">
+          <i class="weui-icon-success weui-icon_msg" ng-show="Result.status==1"></i>
+          <i class="weui-icon-warn weui-icon_msg" ng-show="Result.status==2"></i>
+        </div>
+        <div class="weui-msg__text-area" ng-show="Result.status==1">
+          <h2 class="weui-msg__title">绑定成功</h2>
+          <p class="weui-msg__desc">您的账号已绑定成功，可以愉快地在我们的 PC 页面与微信之间玩耍啦~</p>
+        </div>
+        <div class="weui-msg__text-area" ng-show="Result.status==2">
+          <h2 class="weui-msg__title">绑定失败</h2>
+          <p class="weui-msg__desc">请您检查信息是否填写错误，重新绑定哦~</p>
+        </div>
+      </div>
+    </div>
+    <div class="weui-msg__extra-area">
+      <div class="weui-footer">
+        <p class="weui-footer__links">
+          <a href="javascript:void(0);" class="weui-footer__link">(づ￣ 3￣)づ</a>
+        </p>
+        <p class="weui-footer__text">Copyright © 2016-2017 ishare</p>
+      </div>
+    </div>
+  </div>
+</section>

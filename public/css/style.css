@@ -1,0 +1,20 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.wrapper {
+  margin: 20px auto;
+}
+
+.button-sp-area {
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.hidden {
+  opacity: 0;
+}

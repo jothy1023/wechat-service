@@ -1,0 +1,8 @@
+{
+  "name": "wechat-service",
+  "version": "1.8.0",
+  "dependencies": {
+    "angular": "~1.5.5",
+    "weui": "^1.1.1"
+  }
+}
